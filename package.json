@@ -1,6 +1,6 @@
 {
   "name": "link-lerna-package-binaries",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A small tool built on top of Lerna to link binaries offered by packages to root-level.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
