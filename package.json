@@ -1,0 +1,33 @@
+{
+  "name": "link-lerna-package-binaries",
+  "version": "1.0.0",
+  "description": "Small tools built on top of Lerna to link binaries offered by packages to top-level.",
+  "bin": {
+    "link-lerna-package-binaries": "bin/link-lerna-package-binaries"
+  },
+  "files": [
+    "bin/"
+  ],
+  "scripts": {
+    "prepare": "preppy",
+    "lint": "eslint '**/*.js'",
+    "lint:format": "prettier --write '**/*.js' && eslint --fix '**/*.js'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.8.7",
+    "@babel/preset-env": "^7.8.7",
+    "@effective/eslint-config": "^1.4.0",
+    "eslint": "^6.8.0",
+    "preppy": "^9.3.1",
+    "prettier": "^1.19.1",
+    "typescript": "^3.8.3"
+  },
+  "dependencies": {
+    "@lerna/command": "^3.18.5",
+    "@lerna/create-symlink": "^3.16.2"
+  }
+}
