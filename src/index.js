@@ -5,7 +5,7 @@ import Command from "@lerna/command"
 
 export class LinkBinaries extends Command {
   initialize() {
-    console.log("Run Init")
+    console.log("Linking Lerna package binaries...")
   }
 
   async execute() {
@@ -15,16 +15,15 @@ export class LinkBinaries extends Command {
     for (const targetNode of this.packageGraph.values()) {
       if (targetNode.pkg.bin) {
         for (const binaryName of Object.keys(targetNode.pkg.bin)) {
-          const src = path.join(
+          const srcPath = path.join(
             targetNode.location,
             targetNode.pkg.bin[binaryName]
           )
 
-          const dest = path.join(ROOT_BIN, binaryName)
+          const destPath = path.join(ROOT_BIN, binaryName)
 
-          console.log(`Creating ${dest}...`)
-
-          linkJobs.push(createSymlink(src, dest, "exec"))
+          console.log(`Creating ${destPath}...`)
+          linkJobs.push(createSymlink(srcPath, destPath, "exec"))
         }
       }
     }

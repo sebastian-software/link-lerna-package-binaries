@@ -34,7 +34,7 @@
     "typescript": "^3.8.3"
   },
   "dependencies": {
-    "@lerna/command": "^3.18.5",
-    "@lerna/create-symlink": "^3.16.2"
+    "@lerna/command": "3.x",
+    "@lerna/create-symlink": "3.x"
   }
 }
