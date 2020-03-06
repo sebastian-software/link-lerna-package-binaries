@@ -1,7 +1,5 @@
 .DS_Store
-node_modules/
 bin/
-lib/
-test/*/dist/
-test/*/bin/
+dist/
 coverage/
+node_modules/
