@@ -11,9 +11,9 @@
     "bin/"
   ],
   "scripts": {
-    "release": "git push && release-it --github.release --npm.publish --non-interactive",
-    "release:minor": "git push && release-it --github.release --npm.publish --non-interactive --increment minor",
-    "release:major": "git push && release-it --github.release --npm.publish --non-interactive --increment major",
+    "release": "git push && release-it --ci patch",
+    "release:minor": "git push && release-it --ci minor",
+    "release:major": "git push && release-it --ci major",
     "clean": "rimraf bin dist",
     "prepare": "preppy",
     "lint": "eslint '**/*.js'",
@@ -24,18 +24,19 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@babel/core": "^7.9.0",
-    "@babel/preset-env": "^7.9.0",
-    "@effective/eslint-config": "^2.2.0",
-    "eslint": "^6.8.0",
-    "preppy": "^10.1.0",
-    "prettier": "^2.0.2",
+    "@babel/core": "^7.10.2",
+    "@babel/plugin-transform-runtime": "^7.10.1",
+    "@babel/preset-env": "^7.10.2",
+    "@effective/eslint-config": "^3.7.1",
+    "eslint": "^7.2.0",
+    "preppy": "^10.5.0",
+    "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
-    "typescript": "^3.8.3"
+    "typescript": "^3.9.5"
   },
   "dependencies": {
     "@lerna/command": "3.x",
     "@lerna/create-symlink": "3.x",
-    "core-js": "^3.6.4"
+    "core-js": "^3.6.5"
   }
 }

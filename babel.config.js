@@ -11,6 +11,9 @@ module.exports = (api) => {
 
   return {
     sourceMaps: true,
+    plugins: [
+      "@babel/transform-runtime"
+    ],
     presets: [
       [
         "@babel/env",
